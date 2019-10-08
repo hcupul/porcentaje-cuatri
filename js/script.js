@@ -11,6 +11,9 @@ var dias_cursados = (tiempo_cursado / (1000 * 3600 * 24)).toFixed(0);
 var total = (dias_cursados / dias_cuatri) * 100;
 var porcentaje = total.toFixed(1);
 
-$('.progress-bar').css('width', porcentaje + '%').attr('aria-valuenow', porcentaje);
+$(".progress-bar").animate({
+    width: porcentaje + '%'
+}, 1500);
+
 $('.progress-bar').html(porcentaje + '%');
 $('.parrafo').text(dias_cursados + ' días cursados de ' + dias_cuatri + ' días totales'); 
