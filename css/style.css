@@ -1,0 +1,71 @@
+.progress {
+    height: 37px;
+}
+
+.progress-bar {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+h1, p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #465059;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+}
+
+p {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: bold;
+}
+
+div {
+    font-family: 'Francois One', sans-serif;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 10%;
+}
+
+body {
+    background-image: url("../img/material.gif");
+    background-color: #fff;
+    height: 100%;
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    img {
+        width: 20%;
+        margin-top: 8%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate3d(0,0,0) scale3d(1,1,1);
+    }
+
+    40% {
+        transform: translate3d(0,1.5%,0) scale3d(1,1,1);
+    }
+
+    100% {
+        transform: translate3d(0,2.5%,0) scale3d(1,1,1);
+    }
+}
+
+.jump {
+    transform-origin: 50% 50%;
+    animation: jump 1.5s linear alternate infinite;
+}
