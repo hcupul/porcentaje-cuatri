@@ -32,12 +32,11 @@ div {
     font-family: 'Francois One', sans-serif;
 }
 
-img {
+.img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 body {
@@ -50,10 +49,22 @@ body {
     position: relative;
 }
 
+#divImg {
+    content: url("../img/student.png");
+    height: 25vh;
+    width: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media only screen and (min-width: 600px) {
-    img {
-        width: 20%;
+    .img {
         margin-top: 8%;
+    }
+    #divImg {
+        height: 35vh;
+        width: 35vh;
     }
     h1 {
         font-size: 40px;
