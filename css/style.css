@@ -51,8 +51,8 @@ body {
 
 #divImg {
     content: url("../img/student.png");
-    height: 25vh;
-    width: 25vh;
+    height: 30vh;
+    width: 30vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
