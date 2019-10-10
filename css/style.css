@@ -1,15 +1,28 @@
-.progress {
+.progress-tall {
     height: 37px;
 }
 
-.progress-bar {
+.bar-text-bg {
     font-size: 25px;
-    line-height: 35px;
+}
+
+.progress-container {
+    margin-bottom: 2rem;
+}
+
+.card {
+    margin-bottom: 3rem;
+}
+
+.card-title {
+    font-weight:bold;
 }
 
 .progress-bar {
+    line-height: 35px;
     -webkit-transition: none !important;
     transition: none !important;
+    font-family: 'Francois One', sans-serif;
 }
 
 h1, p {
@@ -25,11 +38,6 @@ h1 {
 
 p {
     font-family: 'Hind Siliguri', sans-serif;
-    font-weight: bold;
-}
-
-div {
-    font-family: 'Francois One', sans-serif;
 }
 
 .img {
@@ -37,6 +45,7 @@ div {
     margin-left: auto;
     margin-right: auto;
     margin-top: 12%;
+    margin-bottom: 2%;
 }
 
 body {

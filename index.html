@@ -4,25 +4,94 @@
     <title>Contador | Porcentaje del cuatri</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="img/student.png" rel="icon">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
-    <link href="css/style.css?ver=1.5" rel="stylesheet">
+    <link href="css/style.css?ver=1.6" rel="stylesheet">
 </head>
 <body>
     <div class="container center">
         <div class="jump img" id="divImg"></div>
-        <h1>¿CUÁNTO LLEVAMOS DEL CUATRI?</h1>
-        <div class="col-xs-12 col-sm-12 progress-container">
-            <div class="progress progress-striped active">
-                <div class="progress-bar progress-bar-info" style="width:0%"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>¿CUÁNTO LLEVAMOS DEL CUATRI?</h1>
+                </div>
+                <div class="col-12">
+                    <div class="btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-info">Por días transcurridos</button>
+                        <button type="button" class="btn btn-outline-info">Por unidades completadas</button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="progress-container">
+                        <div class="progress progress-tall">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info bar-text-bg" style="width:0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="font-weight-bold text-uppercase parrafo"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-title text-uppercase font-weight-bold">Seguridad de la información</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Integradora II</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Tópicos Selectos de TI</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Auditoría de sistemas de TI</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Estadística aplicada</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Negociación empresarial</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" style="width:0%"></div>
+                                </div>
+                            </div>
+                            <p class="card-title text-uppercase font-weight-bold">Inglés IX</p>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" style="width:0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="parrafo"></p>
     </div>
     <script src="js/script.js?ver=1.4"></script>
 </body>
