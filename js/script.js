@@ -94,6 +94,7 @@ function getTotalCuatri(tipo) {
 
     setProgressPorcentaje("#progress-total", porcentaje);
     $('#parrafo-total').text(parrafo);
+    document.cookie = "tipo=" + tipo + "; max-age=604800;";
 }
 
 function getTotalUnidades() {
@@ -136,19 +137,25 @@ function readCookie(name) {
     return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + name.replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
 }
 
-function modoPreferido() {
-    var miCookie = readCookie("mode");
-    if (miCookie === "dark") {
+function setPreferencias() {
+    var modoPreferido = readCookie("mode");
+    if (modoPreferido === "dark") {
         setDarkMode();
     }
-    else if (miCookie === "light") {
+    else if (modoPreferido === "light") {
         setLightMode();
+    }
+
+    var tipoPreferido = readCookie("tipo");
+    if (tipoPreferido !== "" && tipoPreferido !== null) {
+        getTotalCuatri(tipoPreferido);
+    } else {
+        getTotalCuatri("1");
     }
 }
 
 $(document).ready(function () {
-    modoPreferido();
-    getTotalCuatri("1");
+    setPreferencias();
     getTotalUnidades();
     $('[data-toggle="tooltip"]').tooltip();
 });
