@@ -11,12 +11,12 @@ var unidades_auditoria = 3;
 var unidades_estadistica = 3;
 var unidades_negociacion = 2;
 var unidades_ingles = 2;
-var unidades_totales = unidades_seguridad 
-    + unidades_integradora 
-    + unidades_topicos 
-    + unidades_auditoria 
-    + unidades_estadistica 
-    + unidades_negociacion 
+var unidades_totales = unidades_seguridad
+    + unidades_integradora
+    + unidades_topicos
+    + unidades_auditoria
+    + unidades_estadistica
+    + unidades_negociacion
     + unidades_ingles;
 
 //Unidades completadas
@@ -27,12 +27,12 @@ var completadas_auditoria = 1;
 var completadas_estadistica = 1;
 var completadas_negociacion = 0;
 var completadas_ingles = 0;
-var completadas_totales = completadas_seguridad 
-    + completadas_integradora 
-    + completadas_topicos 
-    + completadas_auditoria 
-    + completadas_estadistica 
-    + completadas_negociacion 
+var completadas_totales = completadas_seguridad
+    + completadas_integradora
+    + completadas_topicos
+    + completadas_auditoria
+    + completadas_estadistica
+    + completadas_negociacion
     + completadas_ingles;
 
 function getDiferenciaDias(fechaInicio, fechaFin) {
@@ -60,7 +60,7 @@ function setProgressPorcentaje(id, porc) {
 }
 
 function setProgressEquivalent(id, valor1, valor2) {
-    var porc = getPorcentaje(valor1, valor2)  + '%';
+    var porc = getPorcentaje(valor1, valor2) + '%';
 
     $(id).animate({
         width: porc
@@ -75,27 +75,25 @@ function getTotalCuatri(tipo) {
     var porcentaje = 0;
     var parrafo = "";
 
-    if (tipo === "1") 
-    {
+    if (tipo === "1") {
         total_cuatri = getDiferenciaDias(inicio_cuatri, fin_cuatri);
         total_cursado = getDiferenciaDias(inicio_cuatri, hoy);
         parrafo = total_cursado + ' días cursados de ' + total_cuatri + ' días totales';
-    } 
-    else 
-    {
+    }
+    else {
         total_cuatri = unidades_totales;
         total_cursado = completadas_totales;
         parrafo = total_cursado + ' unidades completadas de ' + total_cuatri + ' unidades totales';
     }
 
-    porcentaje = getPorcentaje(total_cursado, total_cuatri)  + '%';
+    porcentaje = getPorcentaje(total_cursado, total_cuatri) + '%';
 
     //Para evitar que se pasen los valores
     if (total_cursado > total_cuatri)
         total_cursado = total_cuatri;
 
     setProgressPorcentaje("#progress-total", porcentaje);
-    $('#parrafo-total').text(parrafo); 
+    $('#parrafo-total').text(parrafo);
 }
 
 function getTotalUnidades() {
@@ -108,8 +106,8 @@ function getTotalUnidades() {
     setProgressEquivalent("#progress-ingles", completadas_ingles, unidades_ingles);
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     getTotalCuatri("1");
     getTotalUnidades();
-	$('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 });
