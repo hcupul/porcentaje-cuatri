@@ -109,19 +109,45 @@ function getTotalUnidades() {
 function darkMode(e) {
     e.preventDefault();
     if ($("body").hasClass("dark")) {
-        $("body").removeClass("dark");
-        $("body").removeClass("dark-body");
-        $(".float").removeClass("sun").addClass("moon");
-        $(".my-float").removeClass("fa-sun").addClass("fa-moon");
-    } else {
-        $("body").addClass("dark");
-        $("body").addClass("dark-body");
-        $(".float").removeClass("moon").addClass("sun");
-        $(".my-float").removeClass("fa-moon").addClass("fa-sun");
+        setLightMode();
+    }
+    else {
+        setDarkMode();
+    }
+}
+
+function setDarkMode() {
+    document.cookie = "mode=dark; max-age=604800;";
+    $("body").addClass("dark");
+    $("body").addClass("dark-body");
+    $(".float").removeClass("moon").addClass("sun");
+    $(".my-float").removeClass("fa-moon").addClass("fa-sun");
+}
+
+function setLightMode() {
+    document.cookie = "mode=light; max-age=604800;";
+    $("body").removeClass("dark");
+    $("body").removeClass("dark-body");
+    $(".float").removeClass("sun").addClass("moon");
+    $(".my-float").removeClass("fa-sun").addClass("fa-moon");
+}
+
+function readCookie(name) {
+    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + name.replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+}
+
+function modoPreferido() {
+    var miCookie = readCookie("mode");
+    if (miCookie === "dark") {
+        setDarkMode();
+    }
+    else if (miCookie === "light") {
+        setLightMode();
     }
 }
 
 $(document).ready(function () {
+    modoPreferido();
     getTotalCuatri("1");
     getTotalUnidades();
     $('[data-toggle="tooltip"]').tooltip();
