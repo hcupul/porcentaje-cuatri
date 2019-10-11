@@ -67,6 +67,17 @@ body {
     background-size: cover;
 }
 
+.btn-outline-light:hover {
+    color: #465059;
+    background-color: #e9ecef;
+    border-color: rgba(0,0,0,.125);
+}
+
+.btn-outline-light {
+    color: #5e676f;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
 @media only screen and (min-width: 600px) {
     .img {
         margin-top: 8%;
