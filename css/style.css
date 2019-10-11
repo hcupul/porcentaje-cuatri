@@ -49,13 +49,17 @@ p {
 }
 
 body {
-    background-image: url("../img/material.gif");
     background-color: #fff;
     height: 100%;
     background-position: unset;
     background-repeat: no-repeat;
     background-size: auto;
     position: relative;
+}
+
+body {
+    background-image: url("../img/light.gif");
+    transition-duration: 0.8s;
 }
 
 #divImg {
@@ -76,6 +80,63 @@ body {
 .btn-outline-light {
     color: #5e676f;
     border: 1px solid rgba(0,0,0,.125);
+}
+
+.float {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.sun {
+    background-color: #ffffff;
+    color: #465059;
+}
+
+.moon {
+    background-color: #465059;
+    color: #ffffff;
+}
+
+.my-float {
+    margin-top: 12px;
+}
+
+.dark .btn-outline-light:hover {
+    color: #fff;
+    background-color: #2e2e2e;
+}
+
+.dark .btn-outline-light {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.dark .card {
+    background-color: #2e2e2e;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.dark, .dark p, .dark h1 {
+    color: #fff;
+}
+
+.dark-body {
+    background-image: url("../img/dark.jpg");
+    transition-duration: 0.8s;
+}
+
+.moon:hover {
+    color: #ffffff;
+}
+
+.sun:hover {
+    color: #465059;
 }
 
 @media only screen and (min-width: 600px) {

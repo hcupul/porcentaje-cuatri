@@ -106,6 +106,21 @@ function getTotalUnidades() {
     setProgressEquivalent("#progress-ingles", completadas_ingles, unidades_ingles);
 }
 
+function darkMode(e) {
+    e.preventDefault();
+    if ($("body").hasClass("dark")) {
+        $("body").removeClass("dark");
+        $("body").removeClass("dark-body");
+        $(".float").removeClass("sun").addClass("moon");
+        $(".my-float").removeClass("fa-sun").addClass("fa-moon");
+    } else {
+        $("body").addClass("dark");
+        $("body").addClass("dark-body");
+        $(".float").removeClass("moon").addClass("sun");
+        $(".my-float").removeClass("fa-moon").addClass("fa-sun");
+    }
+}
+
 $(document).ready(function () {
     getTotalCuatri("1");
     getTotalUnidades();
