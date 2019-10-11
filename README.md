@@ -13,9 +13,10 @@ Landing page para realizar el seguimiento del décimo cuatrimestre del grupo ITI
 * [Bootstrap 4.3.1](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp) - Framework CSS
 * [jQuery](https://jquery.com/) - Funcionalidad combinada con JS puro
 
-## Autor
+## Crédidos
 
-* **Humberto Cupul** - *Ing. en sistemas informáticos*
+* **Humberto Cupul** - Autor
+* **Freepik** - [Iconos](https://www.flaticon.com/authors/freepik)
 
 ## Página web
 
