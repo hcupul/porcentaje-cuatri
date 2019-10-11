@@ -111,4 +111,5 @@ function getTotalUnidades() {
 $( document ).ready(function() {
     getTotalCuatri("1");
     getTotalUnidades();
+	$('[data-toggle="tooltip"]').tooltip()
 });
