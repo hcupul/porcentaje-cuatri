@@ -20,13 +20,13 @@ var unidades_totales = unidades_seguridad
     + unidades_ingles;
 
 //Unidades completadas
-var completadas_seguridad = 2;
-var completadas_integradora = 0;
-var completadas_topicos = 1;
-var completadas_auditoria = 1;
-var completadas_estadistica = 1;
-var completadas_negociacion = 0;
-var completadas_ingles = 0;
+var completadas_seguridad = 4;
+var completadas_integradora = 1;
+var completadas_topicos = 2;
+var completadas_auditoria = 2;
+var completadas_estadistica = 2;
+var completadas_negociacion = 1;
+var completadas_ingles = 1;
 var completadas_totales = completadas_seguridad
     + completadas_integradora
     + completadas_topicos
